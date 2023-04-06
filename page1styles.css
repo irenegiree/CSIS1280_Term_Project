@@ -2,7 +2,7 @@
 /*Header styles*/
 header {
     background: linear-gradient(to right, rgb(166,222,254));
-    background-image: url(bookstoreladder.jpg);
+    background-image: url(../images/bookstoreladder.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
