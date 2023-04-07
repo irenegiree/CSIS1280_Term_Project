@@ -15,7 +15,7 @@ header #logo {
     float: right;
     background-color: rgba(158, 186, 235, 0.735);
     padding: 5px;
-    width: 400px;
+    width: 350px;
 }
 
 header #logo a {
@@ -43,7 +43,7 @@ nav ul {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color: #286FB4;
+    background-color: #eaa81a;
 }
 
 nav ul li {
@@ -63,14 +63,17 @@ nav ul li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #DF4C73;
+    background-color: #2962dc;
 }
 
 /* HTML and Body Styles*/
+html {
+    background-color: antiquewhite;
+}
 
 body{
-    color: #666;
-    background-color: #E2F0F9;
+    color: rgb(124, 118, 118);
+    background-color: antiquewhite;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
 }
@@ -83,10 +86,10 @@ body{
 
 footer {
     padding: 10px 20px 10px 20px;
-    color: white;
+    color: green;
     background-color: #666;
     position: absolute;
     bottom: 0;
-    width: 97.2%;
+    width: 100%;
     line-height: 1.5rem;
 }

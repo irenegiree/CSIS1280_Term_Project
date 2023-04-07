@@ -1,0 +1,41 @@
+table#cart-items {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table caption {
+    display: table-caption;
+    text-align: left;
+}
+
+#cart-items td,
+#cart-items th {
+    border: 1px solid #ffffff;
+    padding: 8px;
+}
+
+#cart-items tr:nth-child(even) {
+    background-color: #e2f0f9;
+}
+
+#cart-items tr:hover {
+    background-color: #DF4C73;
+}
+
+#cart-items th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #286fb4;
+    color: white;
+}
+
+#total {
+    text-align: right;
+}
+
+html{
+    background-color: #286fb4;
+
+}
