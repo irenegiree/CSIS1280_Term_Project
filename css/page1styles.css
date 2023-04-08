@@ -6,16 +6,17 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 100px;
 }
 
 
 header #logo {
-    margin-top: 160px;
+    /* margin-top: 10px; */
     float: right;
     background-color: rgba(158, 186, 235, 0.735);
-    padding: 5px;
+    padding: 0px;
     width: 400px;
+    height: 100px;
 }
 
 header #logo a {
@@ -89,4 +90,8 @@ footer {
     bottom: 0;
     width: 97.2%;
     line-height: 1.5rem;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
