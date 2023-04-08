@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="css/tablecartstyles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <table id="cart-items">
+        <caption>Total Number of books: <strong id="total-items">0</strong></caption>
+    
+        <colgroup>
+            <col id="firstCol">
+            <col colspan="4">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Book Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>Becoming</strong></br>Michelle Obama</td>
+                </td>
+                <td>1</td>
+                <td class="unit-price">$15.25</td>
+                <td class="subtotal-amount">$15.25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>The House of Eve</strong></br>Sadeqa Johnson</td>
+                </td>
+                <td>1</td>
+                <td class="unit-price">$17.49</td>
+                <td class="subtotal-amount">$17.49</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>Spare</strong></br>Prince Harry</td>
+                </td>
+                <td>1</td>
+                <td class="unit-price">$35.25</td>
+                <td class="subtotal-amount">$35.25</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>The Midnight Library: A Novel</strong></br>Matt Haig</td>
+                </td>
+                <td>1</td>
+                <td class="unit-price">$20.00</td>
+                <td class="subtotal-amount">$20.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="total" colspan="4"><strong>Total Amount</strong></td>
+                <td id="total-amount"><strong>$87.99</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        (function() {
+            var totalItems = document.querySelectorAll('#cart-items tbody tr').length
+
+            document.getElementById('total-items').textContent = totalItems
+
+            var books = [
+                {
+                    title: 'Becoming',
+                    author: 'Michelle Obama',
+                    quantity: 1,
+                    price: 15.25
+                }
+            ]
+        })();
+    </script>
+</body>
+
+</html>
