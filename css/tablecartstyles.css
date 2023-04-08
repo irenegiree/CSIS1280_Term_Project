@@ -7,6 +7,7 @@ table#cart-items {
 table caption {
     display: table-caption;
     text-align: left;
+   font-weight: bold;
 }
 
 #cart-items td,
@@ -15,8 +16,11 @@ table caption {
     padding: 8px;
 }
 
+#cart-items tr:nth-child(odd) {
+    background-color: #b0dde4;
+}
 #cart-items tr:nth-child(even) {
-    background-color: #e2f0f9;
+    background-color: #286fb4;
 }
 
 #cart-items tr:hover {
@@ -37,5 +41,6 @@ table caption {
 
 html{
     background-color: #286fb4;
+
 
 }
