@@ -20,13 +20,48 @@ header #logo {
 }
 
 header #logo a {
+    font-size: 2rem;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 800;
+    color:rgb(151, 17, 66);
+}
+
+h2, h3 {
+    line-height: 0;
+}
+
+header #logo a:visited {
+    color:rgb(151, 17, 66);
+}
+
+nav {
+    background-color: #eaa81a;
+}
+
 nav ul {
+    list-style-type: none;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
     background-color: #286FB4;
 }
 
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover:not(.active) {
+    background-color: #74b1e3;
+}
 
 .active {
     background-color: #DF4C73;
@@ -40,7 +75,12 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
 }
-@ -86,10 +83,10 @@ body{
+
+#content {
+    padding: 20px;
+    height: 100%;
+    line-height: 2rem;
+}
 
 footer {
     padding: 10px 20px 10px 20px;
