@@ -1,37 +1,40 @@
-@@ -15,7 +15,7 @@ header #logo {
+
+/*Header styles*/
+header {
+    background: linear-gradient(to right, rgb(166,222,254));
+    background-image: url(../images/bookstoreladder.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+
+header #logo {
+    /* margin-top: 10px; */
     float: right;
     background-color: rgba(158, 186, 235, 0.735);
-    padding: 5px;
-    width: 350px;
+    padding: 0px;
     width: 400px;
+    height: 100px;
 }
 
 header #logo a {
-@ -43,7 +43,7 @@ nav ul {
+nav ul {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color: #eaa81a;
     background-color: #286FB4;
 }
 
-nav ul li {
-@ -63,17 +63,14 @@ nav ul li a:hover:not(.active) {
-}
 
 .active {
-    background-color: #2962dc;
     background-color: #DF4C73;
 }
 
 /* HTML and Body Styles*/
-html {
-    background-color: antiquewhite;
-}
 
 body{
-    color: rgb(124, 118, 118);
-    background-color: antiquewhite;
     color: #666;
     background-color: #E2F0F9;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -41,12 +44,14 @@ body{
 
 footer {
     padding: 10px 20px 10px 20px;
-    color: green;
     color: white;
     background-color: #666;
     position: absolute;
     bottom: 0;
-    width: 100%;
     width: 97.2%;
     line-height: 1.5rem;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
