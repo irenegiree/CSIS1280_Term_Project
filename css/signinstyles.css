@@ -1,9 +1,11 @@
-body {
+div.background {
     background-color: #df4c73;
+    transition-property: all;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 800px;
     font-family: Verdana, "sans-serif";
 }
+
 
 h1 {
     text-align: center;

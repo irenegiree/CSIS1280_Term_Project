@@ -24,7 +24,8 @@ table caption {
 }
 
 #cart-items tr:hover {
-    background-color: #DF4C73;
+    background-color: #DF4C73;opacity: 0.60;
+    font-weight: bold;
 }
 
 #cart-items th {
@@ -42,5 +43,7 @@ table caption {
 html{
     background-color: #286fb4;
 
-
+}
+::content{
+    opacity: 0.3;
 }

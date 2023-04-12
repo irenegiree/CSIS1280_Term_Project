@@ -1,8 +1,8 @@
 
 body {
     background-color: #df4c73;
-    margin: 0 auto;
-    max-width: 500px;
+    margin:0 auto;
+    max-width: 1000px;
     font-family: Verdana, "sans-serif";
 }
 
@@ -11,9 +11,9 @@ h1 {
 }
 
 fieldset {
-    padding: 30px;
-    border-radius: 15px;
-    background: #B0dde4;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #B0dde4;
 }
 
 fieldset div.submit {
@@ -23,10 +23,15 @@ fieldset div.submit {
 }
 
 input {
-    width: 100%;
+    width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+.column{
+    float: left;
+    width: 50%;
+    height: 330px;
 }
 
 button {
