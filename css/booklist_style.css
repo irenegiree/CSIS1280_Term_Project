@@ -1,21 +1,22 @@
 .book_card {
     float: left;
-    width: 18%;
+    width: 20%;
     height: 330px;
-    margin: 0 0 3% 5%;
+    margin: 0 0 3% 3%;
     background-color: #B0DDE4;
     border-radius: 5%;
     border: 2px solid #286FB4;
     box-shadow: 10px 10px 10px rgb(0 0 0 / 0.3);
     text-align: center;
 }
+
 .book_card .book-img {
     width: 50%;
     height: auto;
     margin-top: 10px;
 }
 .book-info {
-    margin: 0 0 0 25%;
+    margin: 0 0 0 10%;
     text-align: left;
 }
 .book_card input {
@@ -24,4 +25,23 @@
 .book_card button {
     background-color: #286FB4;
     color: #fff;
+}
+
+.book_card:last-child {
+    margin-bottom: 200px;
+}
+
+#content {
+    padding: 40px 0;
+    line-height: 2rem;
+}
+#booklist {
+    margin-left: 50px;
+    /* margin: 0 auto; */
+}
+
+
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
 }

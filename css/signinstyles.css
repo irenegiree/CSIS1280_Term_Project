@@ -1,9 +1,10 @@
-div.background {
+div.background, #content {
     background-color: #df4c73;
     transition-property: all;
     margin: 0 auto;
     max-width: 800px;
     font-family: Verdana, "sans-serif";
+    max-width: 500px;
 }
 
 

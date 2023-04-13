@@ -104,18 +104,53 @@ var booklist= {
             "name":"A Walk to Remember",
             "price":21.5
         },
-        {
-            "name":"Every Breath",
-            "price":22
-        }
+        // {
+        //     "name":"Every Breath",
+        //     "price":22
+        // }
     ],
 
+}
+
+const clickAddOne =  (evt) => {
+    let btnId = evt.target.id;
+    let textId = btnId.replace("add-btn","numbers-to-add");
+    let textInput = document.getElementById(textId);
+    if(textInput != null) {
+        let num = parseInt(textInput.value) + 1;
+        if(num <= 20){
+            textInput.value = num;
+        }
+        if(num == 20) {
+            document.getElementById(btnId).disabled = true;
+        }
+        if(num > 0) {
+            document.getElementById(btnId.replace("add-btn","sub-btn")).disabled = false;
+        }
+    }
+}
+
+const clickSubtractOne =  (evt) => {
+    let btnId = evt.target.id;
+    let textId = btnId.replace("sub-btn","numbers-to-add");
+    let textInput = document.getElementById(textId);
+    if(textInput != null) {
+        let num = parseInt(textInput.value) - 1;
+        if(num >= 0) {
+            textInput.value = num;
+        }
+        if(num == 0) {
+            document.getElementById(btnId).disabled = true;
+        }
+        if(num < 20) {
+            document.getElementById(btnId.replace("sub-btn","add-btn")).disabled = false;
+        }
+    }   
 }
 
 for (var x in booklist) {
     for(var y in booklist[x] ) {
     var b = booklist[x][y]
-    console.log(b);
     var newDiv = document.createElement('div');
     newDiv.className = "book_card";
     var newImg = document.createElement('img');
@@ -136,17 +171,24 @@ for (var x in booklist) {
     newDiv.appendChild(newP3);
     var btnDiv = document.createElement('div');
     btnDiv.id="numeric-btns";
-    var btn1 = document.createElement('button');
-    btn1.innerHTML="-";
-    btnDiv.appendChild(btn1);
     var numberInput = document.createElement('input');
     numberInput.type="number";
     numberInput.min="0";
     numberInput.max="20";
     numberInput.value="0";
+    numberInput.id="numbers-to-add-"+x.replace(" ","")+"-"+y;
+    var btn1 = document.createElement('button');
+    btn1.innerHTML="-";
+    btn1.id="sub-btn-"+x.replace(" ","")+"-"+y;
+    btn1.disabled=true;
+    btn1.addEventListener('click', (evt) => clickSubtractOne(evt));
+    btnDiv.appendChild(btn1);
     btnDiv.appendChild(numberInput);
     var btn2 = document.createElement('button');
     btn2.innerHTML="+";
+    btn2.id="add-btn-"+x.replace(" ","")+"-"+y;
+    btn2.addEventListener('click', (evt) => {clickAddOne(evt)});
+    // btn2.click = clickAddOne(numberInput.id)
     btnDiv.appendChild(btn2);
     newDiv.appendChild(btnDiv);
     var btn3 = document.createElement('button');
@@ -154,6 +196,5 @@ for (var x in booklist) {
     newDiv.appendChild(btn3);
     var targetDiv = document.getElementById("booklist");
     targetDiv.appendChild(newDiv);
-    console.log("target: "+targetDiv);
     } 
 }
