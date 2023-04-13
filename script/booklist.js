@@ -112,6 +112,17 @@ var booklist= {
 
 }
 
+class Item {
+    constructor(bookName, price, quantity) {
+      this.bookName = bookName;
+      this.price = price;
+      this.quantity = quantity;
+      this.subTotal = price * quantity;
+    }
+  }
+
+  var cart = [];
+
 const clickAddOne =  (evt) => {
     let btnId = evt.target.id;
     let textId = btnId.replace("add-btn","numbers-to-add");
@@ -126,6 +137,7 @@ const clickAddOne =  (evt) => {
         }
         if(num > 0) {
             document.getElementById(btnId.replace("add-btn","sub-btn")).disabled = false;
+            document.getElementById(btnId.replace("add-btn","add-to-cart-btn")).disabled = false;
         }
     }
 }
@@ -141,11 +153,39 @@ const clickSubtractOne =  (evt) => {
         }
         if(num == 0) {
             document.getElementById(btnId).disabled = true;
+            document.getElementById(btnId.replace("sub-btn","add-to-cart-btn")).disabled = true;
         }
         if(num < 20) {
             document.getElementById(btnId.replace("sub-btn","add-btn")).disabled = false;
         }
     }   
+}
+
+const clickAddToCart = (evt) => {
+    let info = evt.target.id.split("_")
+    let x = info[1].replace("-"," ");
+    let y = parseInt(info[2]);
+    let selectedBook = booklist[x][y];
+    let qty = document.getElementById(evt.target.id.replace("add-to-cart-btn", "numbers-to-add")).value;
+    var item = new Item(selectedBook.name, parseFloat(selectedBook.price), parseInt(qty));
+    let j = -1;
+    if(cart.length != 0){
+        for (i in cart) {
+            if(cart[i].bookName == item.bookName) {
+                j = i;
+            }
+        }
+        if(j == -1) {
+            cart.push(item);
+        }
+        else {
+            cart[j] = item;
+        }
+    }
+    else {
+        cart.push(item);
+    }
+    console.log(cart);
 }
 
 for (var x in booklist) {
@@ -176,23 +216,26 @@ for (var x in booklist) {
     numberInput.min="0";
     numberInput.max="20";
     numberInput.value="0";
-    numberInput.id="numbers-to-add-"+x.replace(" ","")+"-"+y;
+    numberInput.id="numbers-to-add_"+x.replace(" ","-")+"_"+y;
     var btn1 = document.createElement('button');
     btn1.innerHTML="-";
-    btn1.id="sub-btn-"+x.replace(" ","")+"-"+y;
+    btn1.id="sub-btn_"+x.replace(" ","-")+"_"+y;
     btn1.disabled=true;
     btn1.addEventListener('click', (evt) => clickSubtractOne(evt));
     btnDiv.appendChild(btn1);
     btnDiv.appendChild(numberInput);
     var btn2 = document.createElement('button');
     btn2.innerHTML="+";
-    btn2.id="add-btn-"+x.replace(" ","")+"-"+y;
+    btn2.id="add-btn_"+x.replace(" ","-")+"_"+y;
     btn2.addEventListener('click', (evt) => {clickAddOne(evt)});
     // btn2.click = clickAddOne(numberInput.id)
     btnDiv.appendChild(btn2);
     newDiv.appendChild(btnDiv);
     var btn3 = document.createElement('button');
     btn3.innerHTML="Add to Cart";
+    btn3.id="add-to-cart-btn_"+x.replace(" ","-")+"_"+y;
+    btn3.addEventListener('click', (evt) => {clickAddToCart(evt)});
+    btn3.disabled=true;
     newDiv.appendChild(btn3);
     var targetDiv = document.getElementById("booklist");
     targetDiv.appendChild(newDiv);
