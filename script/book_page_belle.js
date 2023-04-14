@@ -1,4 +1,4 @@
-import { booklist } from './booklist.js';
+import { booklist } from './booklist_belle.js';
 
 class Item {
     constructor(bookName, author, price, quantity) {

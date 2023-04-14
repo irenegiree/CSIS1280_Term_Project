@@ -1,4 +1,4 @@
-import { booklist } from './booklist.js';
+import { booklist } from './booklist_belle.js';
 var authorlist = [
     {
         name: "Charles Dickens",
