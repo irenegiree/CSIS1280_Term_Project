@@ -14,7 +14,6 @@ for (i in items) {
     cart_table_row.appendChild(col1);
     let col2 = document.createElement("td");
     let col2_book = document.createElement("strong");
-    console.log(col2_book);
     col2_book.innerHTML = items[i].bookName;
     col2.appendChild(col2_book);
     let col2_break = document.createElement("br");

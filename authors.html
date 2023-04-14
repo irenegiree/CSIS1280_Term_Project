@@ -8,6 +8,7 @@
         <title>Belle/Authors</title>
         <link href="/css/page1styles.css" rel="stylesheet" />
         <link href="/css/header_footer_style.css" rel="stylesheet" />
+        <link href="/css/authorlist_style.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -24,13 +25,16 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="books.html">Books</a></li>
                 <li><a class="active" href="authors.html">Authors</a></li>
-                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="carttable.html" id="cart-icon-holder"><span id="cart-icon">&#x1F6D2;</span><span id="item-count">0</span></a></li>
                 <li><a href="signUP.html">Sign Up</a></li>
-                <li><a href="carttable.html">Cart</a></li>
+                <li><a href="signin.html">Sign In</a></li>            
             </ul>
         </nav>
 
         <div id="content">
+            <dl id="author-list">
+                
+            </dl>
         </div>
         <footer>
             <h3>Contact Us</h3>
@@ -41,5 +45,7 @@
                 <strong>Hours:</strong> Tuesday-Sunday 9:00am-6:00pm
             </div>
         </footer>
+        <script src="script/itemCount.js"></script>
+        <script type="module" src="script/authorlist.js"></script>
     </body>
 </html>

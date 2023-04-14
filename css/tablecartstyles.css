@@ -22,10 +22,12 @@ table caption {
 }
 #cart-items tr:nth-child(even) {
     background-color: #286fb4;
+    color: whitesmoke;
 }
 
 #cart-items tr:hover {
-    background-color: #DF4C73;opacity: 0.60;
+    background-color: #DF4C73;opacity: 0.90;
+    color: whitesmoke;
     font-weight: bold;
 }
 

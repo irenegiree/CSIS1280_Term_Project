@@ -1,7 +1,10 @@
 
 #content {
+    border: 10px groove #666;
+    border-radius: 15px;
     background-color: #df4c73;
-    margin:0 auto;
+    margin:10px auto;
+    padding: 20px 40px;
     max-width: 1000px;
     font-family: Verdana, "sans-serif";
 }
@@ -18,9 +21,12 @@ fieldset {
 
 fieldset div.submit {
     width: 100%;
-    margin-top: 40px;
+    margin: 20px 0 20px 0;
     text-align: center;
+    float: left;
 }
+
+
 
 input {
     width: 90%;
@@ -31,7 +37,7 @@ input {
 .column{
     float: left;
     width: 50%;
-    height: 330px;
+    height: auto;
 }
 
 button {
@@ -40,4 +46,9 @@ button {
     font-weight: bold;
     padding: 12px 20px;
     box-sizing: border-box;
+    margin: 0 auto;
+}
+
+h1, h3, form p {
+    color: whitesmoke;
 }
