@@ -55,6 +55,7 @@ const clickSubtractOne =  (evt) => {
 }
 
 const clickAddToCart = (evt) => {
+    console.log(cart);
     let info = evt.target.id.split("_")
     let x = info[1].replace("-"," ");
     let y = parseInt(info[2]);
@@ -63,7 +64,7 @@ const clickAddToCart = (evt) => {
     var item = new Item(selectedBook.name, x, parseFloat(selectedBook.price), parseInt(qty));
     let j = -1;
     if(cart.length != 0){
-        for (i in cart) {
+        for (let i in cart) {
             if(cart[i].bookName == item.bookName) {
                 j = i;
             }
@@ -85,6 +86,7 @@ const clickAddToCart = (evt) => {
     });
     localStorage.setItem("count", count);
     document.getElementById('item-count').textContent = count;
+    alert(`${qty} items of ${selectedBook.name} added to Cart!`);
 }
 
 for (var x in booklist) {
