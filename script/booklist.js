@@ -113,8 +113,9 @@ var booklist= {
 }
 
 class Item {
-    constructor(bookName, price, quantity) {
+    constructor(bookName, author, price, quantity) {
       this.bookName = bookName;
+      this.author = author;
       this.price = price;
       this.quantity = quantity;
       this.subTotal = price * quantity;
@@ -167,7 +168,7 @@ const clickAddToCart = (evt) => {
     let y = parseInt(info[2]);
     let selectedBook = booklist[x][y];
     let qty = document.getElementById(evt.target.id.replace("add-to-cart-btn", "numbers-to-add")).value;
-    var item = new Item(selectedBook.name, parseFloat(selectedBook.price), parseInt(qty));
+    var item = new Item(selectedBook.name, x, parseFloat(selectedBook.price), parseInt(qty));
     let j = -1;
     if(cart.length != 0){
         for (i in cart) {
@@ -185,7 +186,8 @@ const clickAddToCart = (evt) => {
     else {
         cart.push(item);
     }
-    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(localStorage.getItem("cart"));
 }
 
 for (var x in booklist) {
@@ -207,7 +209,7 @@ for (var x in booklist) {
     newDiv.appendChild(newP2);
     var newP3 = document.createElement('p');
     newP3.className="book-info";
-    newP3.innerHTML=`Price: ${b.price}`;
+    newP3.innerHTML=`Price: $${b.price}`;
     newDiv.appendChild(newP3);
     var btnDiv = document.createElement('div');
     btnDiv.id="numeric-btns";
