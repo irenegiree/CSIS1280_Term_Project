@@ -85,7 +85,6 @@ const clickAddToCart = (evt) => {
     });
     localStorage.setItem("count", count);
     document.getElementById('item-count').textContent = count;
-    console.log(localStorage.getItem("cart"));
 }
 
 for (var x in booklist) {

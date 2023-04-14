@@ -1,5 +1,3 @@
-console.log(localStorage.getItem("cart"));
-
 var items = JSON.parse(localStorage.getItem("cart"));
 
 let count = 0;

@@ -36,7 +36,6 @@ var authorlist = [
 ]
 
 const selectedBookChange = (evt) => {
-    console.log(evt.target.value);
     var items = JSON.parse(localStorage.getItem("cart"));
     let foundInCart = false;
     let index = parseInt(evt.target.id.replace("book",""));
@@ -76,7 +75,6 @@ for(var i in authorlist) {
     datalistForBooks.id = "books"+i;
     var listOfBooks = booklist[authorlist[i].name];
     let optionList = [];
-    console.log(listOfBooks);
     for(let i in listOfBooks) {
         let option = document.createElement("option");
         option.value = listOfBooks[i].name;
@@ -85,7 +83,6 @@ for(var i in authorlist) {
     for(let j in optionList) {
         datalistForBooks.appendChild(optionList[j]);
     }
-    console.log(optionList);
     ddTag2.appendChild(datalistForBooks);
     let bookQty = document.createElement("span");
     bookQty.id = "book-qty"+i;
